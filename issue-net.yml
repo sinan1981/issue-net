@@ -1,6 +1,6 @@
 ---
 
-- hosts: node04
+- hosts: all
   ignore_errors: yes
   
   tasks:
