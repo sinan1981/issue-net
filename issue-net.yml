@@ -1,7 +1,8 @@
 ---
 
-- hosts: all
+- hosts: node04
   ignore_errors: yes
+  
   tasks:
   - name: issue setup
     template:
