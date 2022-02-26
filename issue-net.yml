@@ -9,13 +9,13 @@
       dest: /etc/issue.net
       
   - name: Modify Banner in SSH config file
-      lineinfile:
-        path: /etc/ssh/sshd_config
-        regexp: '^#Banner none$'
-        insertafter: 'Banner none'
-        line: 'Banner /etc/issue.net' 
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^#Banner none$'
+      insertafter: 'Banner none'
+      line: 'Banner /etc/issue.net' 
 
   - name: Restart SSH service
-      service:
-        name: sshd
-        state: restarted
+    service:
+      name: sshd
+      state: restarted
